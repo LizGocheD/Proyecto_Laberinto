@@ -7,7 +7,9 @@ laberinto = [
     "#.#####.###",
     "#...#.....#",
     "#..###....#",
-    "######.####"
+    "######.####",
+    "######. Fin",
+    " "
 ]
 
 # Coordenadas del personaje
@@ -40,6 +42,12 @@ def mover_personaje(direccion):
         nueva_columna = columna + 1
         if laberinto[fila][nueva_columna] != "#":
             posicion_personaje = (fila, nueva_columna)
+
+# Pedir el nombre del jugador por teclado
+nombre_jugador = input("Ingrese su nombre: ")
+
+# Imprimir mensaje de bienvenida con el nombre
+print(f"Bienvenido/a, {nombre_jugador}!Hora de jugar")
 
 # Ciclo del juego
 while True:
